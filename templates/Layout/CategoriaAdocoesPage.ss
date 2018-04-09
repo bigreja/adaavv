@@ -1,41 +1,33 @@
-<section class="mainContent full-width clearfix homeGallerySection">
-    <div class="container">
-        <div class="row isotopeContainer" id="container" style="position: relative; height: 0px;">
-        <% loop $Children %>
-			  <div class="sectionTitle text-center">
-          <h2>
-            <span class="shape shape-left bg-color-4"></span>
-            <span><a href="$Link">{$Title}</a></span>
-            <span class="shape shape-right bg-color-4"></span>
-          </h2>
-        </div>
-        <div class="row">
-           
-
-         <% loop $Adocoes.Limit(3) %>
-         <div class="col-sm-4 col-xs-12 block">
-            <div class="thumbnail thumbnailContent">
-              <a href="$AbsoluteLink"><img src="$Imagem.FillMax(700,464).Link" alt="{$Imagem.Title}" class="img-responsive"></a>
-              <div class="sticker-round <% if $Sexo = 'Macho' %> bg-color-4 <% else %> bg-color-6 <% end_if %>">{$Created.Format('d')} <br>{$Created.ShortMonth} </div>
-              <div class="caption <% if $Sexo = 'Macho' %> border-color-4 <% else %> border-color-6 <% end_if %>"> 
-                <h3><a href="$AbsoluteLink" class="color-3">{$Title}</a></h3>
-                <p>$Content.FirstParagraph</p>
-                <ul class="list-inline btn-red">
-                  <li><a href="$AbsoluteLink" class="btn btn-link"><i class="fa fa-angle-double-right" aria-hidden="true"></i>Ver Mais</a></li>
-                </ul>
-              </div>
+<section class="section-md bg-white text-center">
+ <% loop $Children %>
+	 <% if $Adocoes.Count > 0 %>
+	<div class="shell">
+          <h3>{$Title}</h3>
+          <div class="range spacing-55"> 
+			<% loop Adocoes.Limit(3) %>  
+            <div class="cell-sm-6 cell-md-4">
+              <!-- Thumbnail boxed-->
+              <article class="thumbnail-boxed <% if $Sexo = 'Macho' %> color-male <% else %> color-female <% end_if %>"><img class="thumbnail-boxed-image" src="$Imagem.FillMax(740,490).Link" alt="$Imagem.Title" width="370" height="240">
+                <div class="thumbnail-boxed-body">
+                  <p class="thumbnail-boxed-title"><a href="$AbsoluteLink">{$Title}</a></p>
+                  <div class="thumbnail-boxed-text">
+                    <!-- <p>$Content.FirstParagraph</p> -->
+					  	<div class="thumbnail-boxed-footer">
+                          <ul class="thumbnail-boxed-meta">
+                             <li><span class="adaavv-calendar"></span><span>{$Created.Format('d')}  {$Created.ShortMonth}</span></li>
+                            <li><span class="adaavv-resize-full"></span><span>{$Tamanho.TitleShort}</span></li>
+                            <li><span class="fa fa-birthday-cake"></span><span>$Idade</span></li>
+							  <li><span class="<% if $Sexo = 'Macho' %> adaavv-male <% else %> adaavv-female <% end_if %>"></span><span>$Sexo</span></li>
+                          </ul>
+                        </div>
+                  </div>
+                </div>
+              </article>
             </div>
-          </div>
-          <% if  $MultipleOf(3) %>
-             </div>
-             <div class="row">
-          <% end_if %>
-          <% if $Last %>
-              </div>
-    		<% end_if %>
-          <% end_loop %>
-        <% end_loop %>
+          	<% end_loop %>
 
-
-
- </section>
+				</div>
+        </div>
+			<% end_if %>
+				<% end_loop %>
+</section>

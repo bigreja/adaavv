@@ -1,49 +1,58 @@
-    <!-- HEADER -->
-    <header id="pageTop" class="header-wrapper">
-      <!-- COLOR BAR -->
-      <div class="container-fluid color-bar top-fixed clearfix">
-        <div class="row">
-          <div class="col-sm-1 col-xs-2 bg-color-1">fix bar</div>
-          <div class="col-sm-1 col-xs-2 bg-color-2">fix bar</div>
-          <div class="col-sm-1 col-xs-2 bg-color-3">fix bar</div>
-          <div class="col-sm-1 col-xs-2 bg-color-4">fix bar</div>
-          <div class="col-sm-1 col-xs-2 bg-color-5">fix bar</div>
-          <div class="col-sm-1 col-xs-2 bg-color-6">fix bar</div>
-          <div class="col-sm-1 bg-color-1 hidden-xs">fix bar</div>
-          <div class="col-sm-1 bg-color-2 hidden-xs">fix bar</div>
-          <div class="col-sm-1 bg-color-3 hidden-xs">fix bar</div>
-          <div class="col-sm-1 bg-color-4 hidden-xs">fix bar</div>
-          <div class="col-sm-1 bg-color-5 hidden-xs">fix bar</div>
-          <div class="col-sm-1 bg-color-6 hidden-xs">fix bar</div>
-        </div>
-      </div>
-
-      <!-- TOP INFO BAR -->
-      <div class="top-info-bar bg-color-7 hidden-xs">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-7">
-              <ul class="list-inline topList">
-		<% with $SiteConfig %>
+<header class="page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-default rd-navbar-original rd-navbar-static" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-static" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-lg-layout="rd-navbar-static" data-stick-up-clone="true" data-md-stick-up-offset="190px" data-lg-stick-up-offset="190px">
+            <div class="rd-navbar-top-panel toggle-original-elements">
+              <div class="rd-navbar-top-panel-toggle toggle-original" data-rd-navbar-toggle=".rd-navbar-top-panel"><span></span></div> 
+              <div class="rd-navbar-top-panel-content">
+                <ul class="inline-list-xxs">
+					<% with $SiteConfig %>
 			<% if $EmailAddress %>
-				<li><i class="fa fa-envelope bg-color-1" aria-hidden="true"></i> <a href="mailto:{$EmailAddress}">{$EmailAddress}</a></li>
+				<li><a class="icon icon-xxs icon-circle icon-gray-outline icon-effect-1 fa fa-envelope" href="mailto:{$EmailAddress}"></a></li>
 				<% end_if %>
     			<% if $FacebookLink %>
-					<li><i class="fa fa-facebook bg-color-4" aria-hidden="true"></i> <a href="$FacebookLink">$FacebookLink</a></li>
+					<li><a class="icon icon-xxs icon-circle icon-gray-outline icon-effect-1 fa fa-facebook" href="$FacebookLink"></a></li>
 					<% end_if %>
             <% if $TwitterLink %>
-				<li><i class="fa fa-twitter bg-color-4" aria-hidden="true"></i> <a href="$TwitterLink">$TwitterLink</a></li>	    
+				<li><a class="icon icon-xxs icon-circle icon-gray-outline icon-effect-1 fa fa-twitter"  href="$TwitterLink"></a></li>
 				<% end_if %>
-
-  <% end_with %>  
-                
-
-              </ul>
+			<% if $InstagramLink %>
+				<li><a class="icon icon-xxs icon-circle icon-gray-outline icon-effect-1 fa fa-instagram"  href="$InstagramLink"></a></li>
+				<% end_if %>
+ 			 <% end_with %>
+                </ul>
+              </div>
             </div>
-           </div>
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <button class="rd-navbar-toggle toggle-original" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand-name" href="{$BaseURL}"><img src="{$ThemeDir}/images/adaavv.png" alt="" ></a></div>
+              </div>
+              <!-- RD Navbar Nav-->
+              <div class="rd-navbar-nav-wrap toggle-original-elements">
+                <% include Navigation %>
+              </div>
+            </div>
+          </nav><nav class="rd-navbar rd-navbar-default rd-navbar--is-clone rd-navbar-static" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-static" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-lg-layout="rd-navbar-static" data-stick-up-clone="true" data-md-stick-up-offset="190px" data-lg-stick-up-offset="190px">
+            <div class="rd-navbar-top-panel toggle-cloned-elements">
+              <div class="rd-navbar-top-panel-toggle toggle-cloned" data-rd-navbar-toggle=".rd-navbar-top-panel"><span></span></div>
+              <div class="rd-navbar-top-panel-content">
+                <% include Navigation %>
+            </div>
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <button class="rd-navbar-toggle toggle-cloned" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand-name" href="{$BaseURL}"><img src="{$ThemeDir}/images/adaavv.png" alt=""></a></div>
+              </div>
+              <!-- RD Navbar Nav-->
+              <div class="rd-navbar-nav-wrap toggle-cloned-elements">
+                <% include Navigation %>
+              </div>
+            </div>
+          </nav>
         </div>
-      </div>
-
-      <!-- NAVBAR -->
-		<% include Navigation %>
-    </header>
+      </header>

@@ -10,22 +10,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- PLUGINS CSS STYLE -->
-	<% require themedCSS('jquery-ui') %>
-	<% require themedCSS('bootstrap.min') %>
-	<% require themedCSS('font-awesome.min') %>
-	<% require themedCSS('settings') %>
-	<% require themedCSS('select_option1') %>
-	<% require themedCSS('owl.carousel') %>
-	<% require themedCSS('jquery.fancybox') %>
-	<% require themedCSS('isotope') %>
+	<% require themedCSS('style') %>
 
   <!-- GOOGLE FONT -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
 
-  <!-- CUSTOM CSS -->
-	<% require themedCSS('style') %>
-	<% require themedCSS('default') %>
 
   <!-- Icons -->
   <link rel="shortcut icon" href="{$ThemeDir}/images/favicon.png">
@@ -48,24 +38,11 @@
 </div>
 	</div>
 	</div>
-	
-<% require themedJavascript('jquery.min') %>
-<% require themedJavascript('jquery-ui') %>
-<% require themedJavascript('bootstrap.min') %>
-<% require themedJavascript('jquery.themepunch.tools.min') %>
-<% require themedJavascript('jquery.themepunch.revolution.min') %>
-<% require themedJavascript('jquery.selectbox-0.1.3.min') %>
-<% require themedJavascript('owl.carousel') %>
-<% require themedJavascript('waypoints.min') %>
-<% require themedJavascript('jquery.counterup.min') %>
-<% require themedJavascript('isotope.min') %>
-<% require themedJavascript('jquery.fancybox.pack') %>
-<% require themedJavascript('isotope-triger') %>
-<% require themedJavascript('jquery.syotimer') %>
-<% require themedJavascript('velocity.min') %>
-<% require themedJavascript('SmoothScroll') %>
-<% require themedJavascript('custom') %>
-		
+
+    <% require themedJavascript('core.min') %>
+    <% require themedJavascript('script') %>
+
+
 </body>
 </html>
 

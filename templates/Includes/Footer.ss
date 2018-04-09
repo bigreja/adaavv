@@ -1,29 +1,34 @@
-<footer>
-  <!-- COPY RIGHT -->
-  <div class="copyRight clearfix">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-5 col-sm-push-7 col-xs-12">
-          <ul class="list-inline">
-			  <% with $SiteConfig %>
+      <!-- Page Footer-->
+		        <footer class="page-footer-default text-center">
+		<div class="shell">
+          <div class="range spacing-30">
+            <div class="cell-md-8 cell-lg-9 text-md-left">
+                         <div class="rd-navbar-top-panel-content">
+                <ul class="inline-list-xxs">
+					<% with $SiteConfig %>
+			<% if $EmailAddress %>
+				<li><a class="icon icon-xxs icon-circle icon-gray-outline icon-effect-1 fa fa-envelope" href="mailto:{$EmailAddress}"></a></li>
+				<% end_if %>
     			<% if $FacebookLink %>
-            <li><a href="{$SiteConfig.FacebookLink}" class="bg-color-4"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>	    <% end_if %>
-            <% if $TwitterLink %><li><a href="#" class="bg-color-4"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>	    <% end_if %>
-
-  <% end_with %>  
-          </ul>
-        </div>
-        <div class="col-sm-7 col-sm-pull-5 col-xs-12">
-          <div class="copyRightText">
-            <p>© 2018 {$SiteConfig.Tagline}</p>
+					<li><a class="icon icon-xxs icon-circle icon-gray-outline icon-effect-1 fa fa-facebook" href="$FacebookLink"></a></li>				
+					<% end_if %>
+            <% if $TwitterLink %>
+				<li><a class="icon icon-xxs icon-circle icon-gray-outline icon-effect-1 fa fa-twitter"  href="$TwitterLink"></a></li>	    
+				<% end_if %>
+			<% if $InstagramLink %>
+				<li><a class="icon icon-xxs icon-circle icon-gray-outline icon-effect-1 fa fa-instagram"  href="$InstagramLink"></a></li>	    
+				<% end_if %>
+ 			 <% end_with %> 
+                </ul>
+              </div>
+ 
+				
+            </div>
+            <div class="cell-md-4 cell-lg-3 text-md-right">
+              <p class="rights">ADAAVV&nbsp;&copy;&nbsp;<span id="copyright-year"></span>&nbsp;<br class="veil-sm">
+                <!-- {%FOOTER_LINK}-->
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</footer>
-</div>
-
-<div class="scrolling">
-<a href="#pageTop" class="backToTop hidden-xs" id="backToTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
-</div>
+      </footer>

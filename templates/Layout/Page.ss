@@ -1,9 +1,7 @@
-<% include SideBar %>
-<div class="content-container unit size3of4 lastUnit">
-	<article>
-		<h1>$Title</h1>
-		<div class="content">$Content</div>
-	</article>
-		$Form
-		$CommentsForm
-</div>
+$Form
+<section class="section-md bg-white">
+        <div class="shell">
+            $Content
+		  </div>
+        </div>
+</section>
